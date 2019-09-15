@@ -19,12 +19,23 @@ var choice = prompt('Enter sum or average');
 var sum = numbers[0]+numbers[1]+numbers[2]+numbers[3]+numbers[4]+numbers[5]+numbers[6]+numbers[7]+numbers[8]+numbers[9]
 
 if (choice == 'sum'){
-  alert(`The sum of the ${count} numbers is ${sum}`);
+  message = 1;
 
 } else if (choice == 'average') {
-  alert(`The average of the ${count} number is ${sum/count}`);
+  message = 2;
   
 } else {
-  alert('Error');
+  message = 3;
 }
   
+switch (message) {
+case 1:
+  alert(`The sum of the ${count} numbers is ${sum}`);
+  break;
+case 2:
+  alert(`The average of the ${count} number is ${sum/count}`);
+  break;
+case 3:
+  alert('Error');
+  break;
+}
